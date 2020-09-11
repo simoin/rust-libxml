@@ -3,6 +3,7 @@
 
 use crate::bindings::*;
 use libc::{c_char, c_int, size_t};
+use std::convert::TryInto;
 use std::os::raw::c_void;
 use std::ptr;
 use std::slice;
@@ -71,7 +72,7 @@ pub fn xmlGetFirstProperty(node: xmlNodePtr) -> xmlAttrPtr {
   unsafe { (*node).properties }
 }
 pub fn xmlGetNodeType(cur: xmlNodePtr) -> u32 {
-  unsafe { (*cur).type_ }
+  unsafe { (*cur).type_.try_into().unwrap() }
 }
 
 pub fn xmlGetParent(cur: xmlNodePtr) -> xmlNodePtr {
@@ -94,24 +95,23 @@ pub fn xmlNodeGetName(cur: xmlNodePtr) -> *const c_char {
 }
 
 // dummy function: no debug output at all
-fn _ignoreInvalidTagsErrorFunc(_user_data: *mut c_void, error: xmlErrorPtr) {
+extern "C" fn _ignoreInvalidTagsErrorFunc(_user_data: *mut c_void, error: xmlErrorPtr) {
   unsafe {
     if !error.is_null() && (*error).code as u32 == xmlParserErrors_XML_HTML_UNKNOWN_TAG {
       // do not record invalid, in fact (out of despair) claim we ARE well-formed, when a tag is invalid.
-      HACKY_WELL_FORMED = true;
+      // HACKY_WELL_FORMED = true;
     }
   }
 }
 
 pub fn setWellFormednessHandler(ctxt: *mut xmlParserCtxt) {
   unsafe {
-    HACKY_WELL_FORMED = false;
     xmlSetStructuredErrorFunc(ctxt as *mut c_void, Some(_ignoreInvalidTagsErrorFunc));
   }
 }
 // helper for parser
 pub fn htmlWellFormed(ctxt: *mut xmlParserCtxt) -> bool {
-  unsafe { (!ctxt.is_null() && (*ctxt).wellFormed > 0) || HACKY_WELL_FORMED }
+  unsafe { !ctxt.is_null() && (*ctxt).wellFormed > 0 }
 }
 
 // helper for xpath

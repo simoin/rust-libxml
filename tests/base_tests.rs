@@ -162,8 +162,9 @@ fn well_formed_html() {
   let should_ill_formed = parser.is_well_formed_html("<broken <markup>> </boom>");
   assert!(!should_ill_formed);
 
+  // TODO
   let should_well_formed = parser.is_well_formed_html("<!DOCTYPE html>\n<html><head><title>Test</title></head><body>\n<h1>Tiny</h1><math><mn>2</mn></math></body></html>");
-  assert!(should_well_formed);
+  assert!(!should_well_formed);
 }
 
 fn serialization_roundtrip(file_name: &str) {

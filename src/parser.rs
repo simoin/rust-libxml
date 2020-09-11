@@ -54,22 +54,23 @@ pub enum XmlParseError {
 
 impl Error for XmlParseError {}
 
-impl fmt::Debug for XmlParseError
-{
+impl fmt::Debug for XmlParseError {
   fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
     write!(f, "{}", self)
   }
 }
 
-
-impl fmt::Display for XmlParseError
-{
+impl fmt::Display for XmlParseError {
   fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-    write!(f, "{}", match self {
-      XmlParseError::GotNullPointer   => "Got a Null pointer",
-      XmlParseError::FileOpenError    => "Unable to open path to file.",
-      XmlParseError::DocumentTooLarge => "Document too large for i32.",
-    })
+    write!(
+      f,
+      "{}",
+      match self {
+        XmlParseError::GotNullPointer => "Got a Null pointer",
+        XmlParseError::FileOpenError => "Unable to open path to file.",
+        XmlParseError::DocumentTooLarge => "Document too large for i32.",
+      }
+    )
   }
 }
 

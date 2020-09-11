@@ -1,7 +1,7 @@
-use pkg_config::find_library;
-
 fn main() {
-  if find_library("libxml-2.0").is_err() {
-    panic!("Could not find libxml2 using pkg-config")
+  if pkg_config::find_library("libxml-2.0").is_ok() {
+  } else if vcpkg::find_package("libxml2").is_ok() {
+  } else {
+    panic!("Could not find libxml2")
   }
 }
