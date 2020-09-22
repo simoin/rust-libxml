@@ -331,19 +331,6 @@ pub struct _xmlBuffer {
   pub alloc: xmlBufferAllocationScheme,
   pub contentIO: *mut xmlChar,
 }
-#[test]
-fn bindgen_test_layout__xmlBuffer() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlBuffer>(),
-    32usize,
-    concat!("Size of: ", stringify!(_xmlBuffer))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlBuffer>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlBuffer))
-  );
-}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct _xmlBuf {
@@ -394,19 +381,6 @@ pub struct _xmlNotation {
   pub PublicID: *const xmlChar,
   pub SystemID: *const xmlChar,
 }
-#[test]
-fn bindgen_test_layout__xmlNotation() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlNotation>(),
-    24usize,
-    concat!("Size of: ", stringify!(_xmlNotation))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlNotation>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlNotation))
-  );
-}
 pub const xmlAttributeType_XML_ATTRIBUTE_CDATA: xmlAttributeType = 1;
 pub const xmlAttributeType_XML_ATTRIBUTE_ID: xmlAttributeType = 2;
 pub const xmlAttributeType_XML_ATTRIBUTE_IDREF: xmlAttributeType = 3;
@@ -431,19 +405,6 @@ pub struct _xmlEnumeration {
   pub next: *mut _xmlEnumeration,
   pub name: *const xmlChar,
 }
-#[test]
-fn bindgen_test_layout__xmlEnumeration() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlEnumeration>(),
-    16usize,
-    concat!("Size of: ", stringify!(_xmlEnumeration))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlEnumeration>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlEnumeration))
-  );
-}
 pub type xmlAttribute = _xmlAttribute;
 pub type xmlAttributePtr = *mut xmlAttribute;
 #[repr(C)]
@@ -465,19 +426,6 @@ pub struct _xmlAttribute {
   pub tree: xmlEnumerationPtr,
   pub prefix: *const xmlChar,
   pub elem: *const xmlChar,
-}
-#[test]
-fn bindgen_test_layout__xmlAttribute() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlAttribute>(),
-    120usize,
-    concat!("Size of: ", stringify!(_xmlAttribute))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlAttribute>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlAttribute))
-  );
 }
 pub const xmlElementContentType_XML_ELEMENT_CONTENT_PCDATA: xmlElementContentType = 1;
 pub const xmlElementContentType_XML_ELEMENT_CONTENT_ELEMENT: xmlElementContentType = 2;
@@ -501,19 +449,6 @@ pub struct _xmlElementContent {
   pub c2: *mut _xmlElementContent,
   pub parent: *mut _xmlElementContent,
   pub prefix: *const xmlChar,
-}
-#[test]
-fn bindgen_test_layout__xmlElementContent() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlElementContent>(),
-    48usize,
-    concat!("Size of: ", stringify!(_xmlElementContent))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlElementContent>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlElementContent))
-  );
 }
 pub const xmlElementTypeVal_XML_ELEMENT_TYPE_UNDEFINED: xmlElementTypeVal = 0;
 pub const xmlElementTypeVal_XML_ELEMENT_TYPE_EMPTY: xmlElementTypeVal = 1;
@@ -702,19 +637,6 @@ pub struct _xmlElement {
   pub prefix: *const xmlChar,
   pub contModel: xmlRegexpPtr,
 }
-#[test]
-fn bindgen_test_layout__xmlElement() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlElement>(),
-    112usize,
-    concat!("Size of: ", stringify!(_xmlElement))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlElement>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlElement))
-  );
-}
 pub use self::xmlElementType as xmlNsType;
 pub type xmlNs = _xmlNs;
 pub type xmlNsPtr = *mut xmlNs;
@@ -727,19 +649,6 @@ pub struct _xmlNs {
   pub prefix: *const xmlChar,
   pub _private: *mut ::std::os::raw::c_void,
   pub context: *mut _xmlDoc,
-}
-#[test]
-fn bindgen_test_layout__xmlNs() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlNs>(),
-    48usize,
-    concat!("Size of: ", stringify!(_xmlNs))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlNs>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlNs))
-  );
 }
 pub type xmlDtd = _xmlDtd;
 pub type xmlDtdPtr = *mut xmlDtd;
@@ -763,19 +672,6 @@ pub struct _xmlDtd {
   pub SystemID: *const xmlChar,
   pub pentities: *mut ::std::os::raw::c_void,
 }
-#[test]
-fn bindgen_test_layout__xmlDtd() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlDtd>(),
-    128usize,
-    concat!("Size of: ", stringify!(_xmlDtd))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlDtd>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlDtd))
-  );
-}
 pub type xmlAttr = _xmlAttr;
 pub type xmlAttrPtr = *mut xmlAttr;
 #[repr(C)]
@@ -794,19 +690,6 @@ pub struct _xmlAttr {
   pub atype: xmlAttributeType,
   pub psvi: *mut ::std::os::raw::c_void,
 }
-#[test]
-fn bindgen_test_layout__xmlAttr() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlAttr>(),
-    96usize,
-    concat!("Size of: ", stringify!(_xmlAttr))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlAttr>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlAttr))
-  );
-}
 pub type xmlID = _xmlID;
 pub type xmlIDPtr = *mut xmlID;
 #[repr(C)]
@@ -819,19 +702,6 @@ pub struct _xmlID {
   pub lineno: ::std::os::raw::c_int,
   pub doc: *mut _xmlDoc,
 }
-#[test]
-fn bindgen_test_layout__xmlID() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlID>(),
-    48usize,
-    concat!("Size of: ", stringify!(_xmlID))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlID>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlID))
-  );
-}
 pub type xmlRef = _xmlRef;
 pub type xmlRefPtr = *mut xmlRef;
 #[repr(C)]
@@ -842,19 +712,6 @@ pub struct _xmlRef {
   pub attr: xmlAttrPtr,
   pub name: *const xmlChar,
   pub lineno: ::std::os::raw::c_int,
-}
-#[test]
-fn bindgen_test_layout__xmlRef() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlRef>(),
-    40usize,
-    concat!("Size of: ", stringify!(_xmlRef))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlRef>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlRef))
-  );
 }
 pub type xmlNode = _xmlNode;
 pub type xmlNodePtr = *mut xmlNode;
@@ -877,19 +734,6 @@ pub struct _xmlNode {
   pub psvi: *mut ::std::os::raw::c_void,
   pub line: ::std::os::raw::c_ushort,
   pub extra: ::std::os::raw::c_ushort,
-}
-#[test]
-fn bindgen_test_layout__xmlNode() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlNode>(),
-    120usize,
-    concat!("Size of: ", stringify!(_xmlNode))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlNode>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlNode))
-  );
 }
 pub const xmlDocProperties_XML_DOC_WELLFORMED: xmlDocProperties = 1;
 pub const xmlDocProperties_XML_DOC_NSVALID: xmlDocProperties = 2;
@@ -930,19 +774,6 @@ pub struct _xmlDoc {
   pub parseFlags: ::std::os::raw::c_int,
   pub properties: ::std::os::raw::c_int,
 }
-#[test]
-fn bindgen_test_layout__xmlDoc() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlDoc>(),
-    176usize,
-    concat!("Size of: ", stringify!(_xmlDoc))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlDoc>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlDoc))
-  );
-}
 pub type xmlDOMWrapCtxt = _xmlDOMWrapCtxt;
 pub type xmlDOMWrapCtxtPtr = *mut xmlDOMWrapCtxt;
 pub type xmlDOMWrapAcquireNsFunction = ::std::option::Option<
@@ -960,19 +791,6 @@ pub struct _xmlDOMWrapCtxt {
   pub type_: ::std::os::raw::c_int,
   pub namespaceMap: *mut ::std::os::raw::c_void,
   pub getNsForNodeFunc: xmlDOMWrapAcquireNsFunction,
-}
-#[test]
-fn bindgen_test_layout__xmlDOMWrapCtxt() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlDOMWrapCtxt>(),
-    32usize,
-    concat!("Size of: ", stringify!(_xmlDOMWrapCtxt))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlDOMWrapCtxt>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlDOMWrapCtxt))
-  );
 }
 extern "C" {
   pub fn xmlValidateNCName(
@@ -1922,19 +1740,6 @@ pub struct _xmlError {
   pub int2: ::std::os::raw::c_int,
   pub ctxt: *mut ::std::os::raw::c_void,
   pub node: *mut ::std::os::raw::c_void,
-}
-#[test]
-fn bindgen_test_layout__xmlError() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlError>(),
-    88usize,
-    concat!("Size of: ", stringify!(_xmlError))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlError>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlError))
-  );
 }
 pub const xmlParserErrors_XML_ERR_OK: xmlParserErrors = 0;
 pub const xmlParserErrors_XML_ERR_INTERNAL_ERROR: xmlParserErrors = 1;
@@ -3051,19 +2856,6 @@ pub struct _xmlValidCtxt {
   pub am: xmlAutomataPtr,
   pub state: xmlAutomataStatePtr,
 }
-#[test]
-fn bindgen_test_layout__xmlValidCtxt() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlValidCtxt>(),
-    112usize,
-    concat!("Size of: ", stringify!(_xmlValidCtxt))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlValidCtxt>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlValidCtxt))
-  );
-}
 pub type xmlNotationTable = _xmlHashTable;
 pub type xmlNotationTablePtr = *mut xmlNotationTable;
 pub type xmlElementTable = _xmlHashTable;
@@ -3460,19 +3252,6 @@ pub struct _xmlEntity {
   pub owner: ::std::os::raw::c_int,
   pub checked: ::std::os::raw::c_int,
 }
-#[test]
-fn bindgen_test_layout__xmlEntity() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlEntity>(),
-    136usize,
-    concat!("Size of: ", stringify!(_xmlEntity))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlEntity>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlEntity))
-  );
-}
 pub type xmlEntitiesTable = _xmlHashTable;
 pub type xmlEntitiesTablePtr = *mut xmlEntitiesTable;
 extern "C" {
@@ -3706,14 +3485,6 @@ pub struct _xmlParserCtxt {
   pub input_id: ::std::os::raw::c_int,
   pub sizeentcopy: ::std::os::raw::c_ulong,
 }
-#[test]
-fn bindgen_test_layout__xmlParserCtxt() {
-  assert_eq!(
-    ::std::mem::align_of::<_xmlParserCtxt>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlParserCtxt))
-  );
-}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct _xmlSAXLocator {
@@ -3727,19 +3498,6 @@ pub struct _xmlSAXLocator {
   pub getColumnNumber: ::std::option::Option<
     unsafe extern "C" fn(ctx: *mut ::std::os::raw::c_void) -> ::std::os::raw::c_int,
   >,
-}
-#[test]
-fn bindgen_test_layout__xmlSAXLocator() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlSAXLocator>(),
-    32usize,
-    concat!("Size of: ", stringify!(_xmlSAXLocator))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlSAXLocator>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlSAXLocator))
-  );
 }
 pub type resolveEntitySAXFunc = ::std::option::Option<
   unsafe extern "C" fn(
@@ -3949,19 +3707,6 @@ pub struct _xmlSAXHandler {
   pub endElementNs: endElementNsSAX2Func,
   pub serror: xmlStructuredErrorFunc,
 }
-#[test]
-fn bindgen_test_layout__xmlSAXHandler() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlSAXHandler>(),
-    256usize,
-    concat!("Size of: ", stringify!(_xmlSAXHandler))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlSAXHandler>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlSAXHandler))
-  );
-}
 pub type xmlSAXHandlerV1 = _xmlSAXHandlerV1;
 pub type xmlSAXHandlerV1Ptr = *mut xmlSAXHandlerV1;
 #[repr(C)]
@@ -3995,19 +3740,6 @@ pub struct _xmlSAXHandlerV1 {
   pub cdataBlock: cdataBlockSAXFunc,
   pub externalSubset: externalSubsetSAXFunc,
   pub initialized: ::std::os::raw::c_uint,
-}
-#[test]
-fn bindgen_test_layout__xmlSAXHandlerV1() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlSAXHandlerV1>(),
-    224usize,
-    concat!("Size of: ", stringify!(_xmlSAXHandlerV1))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlSAXHandlerV1>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlSAXHandlerV1))
-  );
 }
 pub type xmlExternalEntityLoader = ::std::option::Option<
   unsafe extern "C" fn(
@@ -4073,19 +3805,6 @@ pub struct _uconv_t {
   pub pivot_source: *mut UChar,
   pub pivot_target: *mut UChar,
 }
-#[test]
-fn bindgen_test_layout__uconv_t() {
-  assert_eq!(
-    ::std::mem::size_of::<_uconv_t>(),
-    2080usize,
-    concat!("Size of: ", stringify!(_uconv_t))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_uconv_t>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_uconv_t))
-  );
-}
 pub type uconv_t = _uconv_t;
 pub type xmlCharEncodingHandler = _xmlCharEncodingHandler;
 pub type xmlCharEncodingHandlerPtr = *mut xmlCharEncodingHandler;
@@ -4099,19 +3818,6 @@ pub struct _xmlCharEncodingHandler {
   pub iconv_out: iconv_t,
   pub uconv_in: *mut uconv_t,
   pub uconv_out: *mut uconv_t,
-}
-#[test]
-fn bindgen_test_layout__xmlCharEncodingHandler() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlCharEncodingHandler>(),
-    56usize,
-    concat!("Size of: ", stringify!(_xmlCharEncodingHandler))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlCharEncodingHandler>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlCharEncodingHandler))
-  );
 }
 extern "C" {
   pub fn xmlInitCharEncodingHandlers();
@@ -4302,19 +4008,6 @@ pub struct _xlinkHandler {
   pub simple: xlinkSimpleLinkFunk,
   pub extended: xlinkExtendedLinkFunk,
   pub set: xlinkExtendedLinkSetFunk,
-}
-#[test]
-fn bindgen_test_layout__xlinkHandler() {
-  assert_eq!(
-    ::std::mem::size_of::<_xlinkHandler>(),
-    24usize,
-    concat!("Size of: ", stringify!(_xlinkHandler))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xlinkHandler>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xlinkHandler))
-  );
 }
 extern "C" {
   pub fn xlinkGetDefaultDetect() -> xlinkNodeDetectFunc;
@@ -4716,19 +4409,6 @@ pub struct _xmlGlobalState {
   pub xmlOutputBufferCreateFilenameValue: xmlOutputBufferCreateFilenameFunc,
   pub xmlStructuredErrorContext: *mut ::std::os::raw::c_void,
 }
-#[test]
-fn bindgen_test_layout__xmlGlobalState() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlGlobalState>(),
-    968usize,
-    concat!("Size of: ", stringify!(_xmlGlobalState))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlGlobalState>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlGlobalState))
-  );
-}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct _xmlMutex {
@@ -4980,19 +4660,6 @@ pub struct _xmlParserInputBuffer {
   pub error: ::std::os::raw::c_int,
   pub rawconsumed: ::std::os::raw::c_ulong,
 }
-#[test]
-fn bindgen_test_layout__xmlParserInputBuffer() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlParserInputBuffer>(),
-    64usize,
-    concat!("Size of: ", stringify!(_xmlParserInputBuffer))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlParserInputBuffer>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlParserInputBuffer))
-  );
-}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct _xmlOutputBuffer {
@@ -5004,19 +4671,6 @@ pub struct _xmlOutputBuffer {
   pub conv: xmlBufPtr,
   pub written: ::std::os::raw::c_int,
   pub error: ::std::os::raw::c_int,
-}
-#[test]
-fn bindgen_test_layout__xmlOutputBuffer() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlOutputBuffer>(),
-    56usize,
-    concat!("Size of: ", stringify!(_xmlOutputBuffer))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlOutputBuffer>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlOutputBuffer))
-  );
 }
 extern "C" {
   pub fn xmlCleanupInputCallbacks();
@@ -5776,19 +5430,6 @@ pub struct _htmlElemDesc {
   pub attrs_depr: *mut *const ::std::os::raw::c_char,
   pub attrs_req: *mut *const ::std::os::raw::c_char,
 }
-#[test]
-fn bindgen_test_layout__htmlElemDesc() {
-  assert_eq!(
-    ::std::mem::size_of::<_htmlElemDesc>(),
-    64usize,
-    concat!("Size of: ", stringify!(_htmlElemDesc))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_htmlElemDesc>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_htmlElemDesc))
-  );
-}
 pub type htmlEntityDesc = _htmlEntityDesc;
 pub type htmlEntityDescPtr = *mut htmlEntityDesc;
 #[repr(C)]
@@ -5797,19 +5438,6 @@ pub struct _htmlEntityDesc {
   pub value: ::std::os::raw::c_uint,
   pub name: *const ::std::os::raw::c_char,
   pub desc: *const ::std::os::raw::c_char,
-}
-#[test]
-fn bindgen_test_layout__htmlEntityDesc() {
-  assert_eq!(
-    ::std::mem::size_of::<_htmlEntityDesc>(),
-    24usize,
-    concat!("Size of: ", stringify!(_htmlEntityDesc))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_htmlEntityDesc>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_htmlEntityDesc))
-  );
 }
 extern "C" {
   pub fn htmlTagLookup(tag: *const xmlChar) -> *const htmlElemDesc;
@@ -6391,19 +6019,6 @@ pub struct _xmlNodeSet {
   pub nodeMax: ::std::os::raw::c_int,
   pub nodeTab: *mut xmlNodePtr,
 }
-#[test]
-fn bindgen_test_layout__xmlNodeSet() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlNodeSet>(),
-    16usize,
-    concat!("Size of: ", stringify!(_xmlNodeSet))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlNodeSet>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlNodeSet))
-  );
-}
 pub const xmlXPathObjectType_XPATH_UNDEFINED: xmlXPathObjectType = 0;
 pub const xmlXPathObjectType_XPATH_NODESET: xmlXPathObjectType = 1;
 pub const xmlXPathObjectType_XPATH_BOOLEAN: xmlXPathObjectType = 2;
@@ -6430,19 +6045,6 @@ pub struct _xmlXPathObject {
   pub user2: *mut ::std::os::raw::c_void,
   pub index2: ::std::os::raw::c_int,
 }
-#[test]
-fn bindgen_test_layout__xmlXPathObject() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlXPathObject>(),
-    72usize,
-    concat!("Size of: ", stringify!(_xmlXPathObject))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlXPathObject>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlXPathObject))
-  );
-}
 pub type xmlXPathConvertFunc = ::std::option::Option<
   unsafe extern "C" fn(
     obj: xmlXPathObjectPtr,
@@ -6457,19 +6059,6 @@ pub struct _xmlXPathType {
   pub name: *const xmlChar,
   pub func: xmlXPathConvertFunc,
 }
-#[test]
-fn bindgen_test_layout__xmlXPathType() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlXPathType>(),
-    16usize,
-    concat!("Size of: ", stringify!(_xmlXPathType))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlXPathType>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlXPathType))
-  );
-}
 pub type xmlXPathVariable = _xmlXPathVariable;
 pub type xmlXPathVariablePtr = *mut xmlXPathVariable;
 #[repr(C)]
@@ -6477,19 +6066,6 @@ pub type xmlXPathVariablePtr = *mut xmlXPathVariable;
 pub struct _xmlXPathVariable {
   pub name: *const xmlChar,
   pub value: xmlXPathObjectPtr,
-}
-#[test]
-fn bindgen_test_layout__xmlXPathVariable() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlXPathVariable>(),
-    16usize,
-    concat!("Size of: ", stringify!(_xmlXPathVariable))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlXPathVariable>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlXPathVariable))
-  );
 }
 pub type xmlXPathEvalFunc = ::std::option::Option<
   unsafe extern "C" fn(ctxt: xmlXPathParserContextPtr, nargs: ::std::os::raw::c_int),
@@ -6502,19 +6078,6 @@ pub struct _xmlXPathFunct {
   pub name: *const xmlChar,
   pub func: xmlXPathEvalFunc,
 }
-#[test]
-fn bindgen_test_layout__xmlXPathFunct() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlXPathFunct>(),
-    16usize,
-    concat!("Size of: ", stringify!(_xmlXPathFunct))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlXPathFunct>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlXPathFunct))
-  );
-}
 pub type xmlXPathAxisFunc = ::std::option::Option<
   unsafe extern "C" fn(ctxt: xmlXPathParserContextPtr, cur: xmlXPathObjectPtr) -> xmlXPathObjectPtr,
 >;
@@ -6525,19 +6088,6 @@ pub type xmlXPathAxisPtr = *mut xmlXPathAxis;
 pub struct _xmlXPathAxis {
   pub name: *const xmlChar,
   pub func: xmlXPathAxisFunc,
-}
-#[test]
-fn bindgen_test_layout__xmlXPathAxis() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlXPathAxis>(),
-    16usize,
-    concat!("Size of: ", stringify!(_xmlXPathAxis))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlXPathAxis>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlXPathAxis))
-  );
 }
 pub type xmlXPathFunction = ::std::option::Option<
   unsafe extern "C" fn(ctxt: xmlXPathParserContextPtr, nargs: ::std::os::raw::c_int),
@@ -6626,19 +6176,6 @@ pub struct _xmlXPathParserContext {
   pub xptr: ::std::os::raw::c_int,
   pub ancestor: xmlNodePtr,
   pub valueFrame: ::std::os::raw::c_int,
-}
-#[test]
-fn bindgen_test_layout__xmlXPathParserContext() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlXPathParserContext>(),
-    88usize,
-    concat!("Size of: ", stringify!(_xmlXPathParserContext))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlXPathParserContext>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlXPathParserContext))
-  );
 }
 extern "C" {
   pub static mut xmlXPathNAN: f64;
@@ -7044,19 +6581,6 @@ pub struct _xmlChRangeGroup {
   pub shortRange: *const xmlChSRange,
   pub longRange: *const xmlChLRange,
 }
-#[test]
-fn bindgen_test_layout__xmlChRangeGroup() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlChRangeGroup>(),
-    24usize,
-    concat!("Size of: ", stringify!(_xmlChRangeGroup))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlChRangeGroup>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlChRangeGroup))
-  );
-}
 extern "C" {
   pub fn xmlCharInRange(
     val: ::std::os::raw::c_uint,
@@ -7165,19 +6689,6 @@ pub struct _xmlShellCtxt {
   pub loaded: ::std::os::raw::c_int,
   pub output: *mut FILE,
   pub input: xmlShellReadlineFunc,
-}
-#[test]
-fn bindgen_test_layout__xmlShellCtxt() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlShellCtxt>(),
-    56usize,
-    concat!("Size of: ", stringify!(_xmlShellCtxt))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlShellCtxt>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlShellCtxt))
-  );
 }
 pub type xmlShellCmd = ::std::option::Option<
   unsafe extern "C" fn(
@@ -8267,19 +7778,6 @@ pub struct _xmlSchemaAnnot {
   pub next: *mut _xmlSchemaAnnot,
   pub content: xmlNodePtr,
 }
-#[test]
-fn bindgen_test_layout__xmlSchemaAnnot() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlSchemaAnnot>(),
-    16usize,
-    concat!("Size of: ", stringify!(_xmlSchemaAnnot))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlSchemaAnnot>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlSchemaAnnot))
-  );
-}
 pub type xmlSchemaAttribute = _xmlSchemaAttribute;
 pub type xmlSchemaAttributePtr = *mut xmlSchemaAttribute;
 #[repr(C)]
@@ -8305,19 +7803,6 @@ pub struct _xmlSchemaAttribute {
   pub defVal: xmlSchemaValPtr,
   pub refDecl: xmlSchemaAttributePtr,
 }
-#[test]
-fn bindgen_test_layout__xmlSchemaAttribute() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlSchemaAttribute>(),
-    152usize,
-    concat!("Size of: ", stringify!(_xmlSchemaAttribute))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlSchemaAttribute>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlSchemaAttribute))
-  );
-}
 pub type xmlSchemaAttributeLink = _xmlSchemaAttributeLink;
 pub type xmlSchemaAttributeLinkPtr = *mut xmlSchemaAttributeLink;
 #[repr(C)]
@@ -8326,19 +7811,6 @@ pub struct _xmlSchemaAttributeLink {
   pub next: *mut _xmlSchemaAttributeLink,
   pub attr: *mut _xmlSchemaAttribute,
 }
-#[test]
-fn bindgen_test_layout__xmlSchemaAttributeLink() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlSchemaAttributeLink>(),
-    16usize,
-    concat!("Size of: ", stringify!(_xmlSchemaAttributeLink))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlSchemaAttributeLink>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlSchemaAttributeLink))
-  );
-}
 pub type xmlSchemaWildcardNs = _xmlSchemaWildcardNs;
 pub type xmlSchemaWildcardNsPtr = *mut xmlSchemaWildcardNs;
 #[repr(C)]
@@ -8346,19 +7818,6 @@ pub type xmlSchemaWildcardNsPtr = *mut xmlSchemaWildcardNs;
 pub struct _xmlSchemaWildcardNs {
   pub next: *mut _xmlSchemaWildcardNs,
   pub value: *const xmlChar,
-}
-#[test]
-fn bindgen_test_layout__xmlSchemaWildcardNs() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlSchemaWildcardNs>(),
-    16usize,
-    concat!("Size of: ", stringify!(_xmlSchemaWildcardNs))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlSchemaWildcardNs>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlSchemaWildcardNs))
-  );
 }
 pub type xmlSchemaWildcard = _xmlSchemaWildcard;
 pub type xmlSchemaWildcardPtr = *mut xmlSchemaWildcard;
@@ -8376,19 +7835,6 @@ pub struct _xmlSchemaWildcard {
   pub nsSet: xmlSchemaWildcardNsPtr,
   pub negNsSet: xmlSchemaWildcardNsPtr,
   pub flags: ::std::os::raw::c_int,
-}
-#[test]
-fn bindgen_test_layout__xmlSchemaWildcard() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlSchemaWildcard>(),
-    72usize,
-    concat!("Size of: ", stringify!(_xmlSchemaWildcard))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlSchemaWildcard>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlSchemaWildcard))
-  );
 }
 pub type xmlSchemaAttributeGroup = _xmlSchemaAttributeGroup;
 pub type xmlSchemaAttributeGroupPtr = *mut xmlSchemaAttributeGroup;
@@ -8411,19 +7857,6 @@ pub struct _xmlSchemaAttributeGroup {
   pub targetNamespace: *const xmlChar,
   pub attrUses: *mut ::std::os::raw::c_void,
 }
-#[test]
-fn bindgen_test_layout__xmlSchemaAttributeGroup() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlSchemaAttributeGroup>(),
-    120usize,
-    concat!("Size of: ", stringify!(_xmlSchemaAttributeGroup))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlSchemaAttributeGroup>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlSchemaAttributeGroup))
-  );
-}
 pub type xmlSchemaTypeLink = _xmlSchemaTypeLink;
 pub type xmlSchemaTypeLinkPtr = *mut xmlSchemaTypeLink;
 #[repr(C)]
@@ -8432,19 +7865,6 @@ pub struct _xmlSchemaTypeLink {
   pub next: *mut _xmlSchemaTypeLink,
   pub type_: xmlSchemaTypePtr,
 }
-#[test]
-fn bindgen_test_layout__xmlSchemaTypeLink() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlSchemaTypeLink>(),
-    16usize,
-    concat!("Size of: ", stringify!(_xmlSchemaTypeLink))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlSchemaTypeLink>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlSchemaTypeLink))
-  );
-}
 pub type xmlSchemaFacetLink = _xmlSchemaFacetLink;
 pub type xmlSchemaFacetLinkPtr = *mut xmlSchemaFacetLink;
 #[repr(C)]
@@ -8452,19 +7872,6 @@ pub type xmlSchemaFacetLinkPtr = *mut xmlSchemaFacetLink;
 pub struct _xmlSchemaFacetLink {
   pub next: *mut _xmlSchemaFacetLink,
   pub facet: xmlSchemaFacetPtr,
-}
-#[test]
-fn bindgen_test_layout__xmlSchemaFacetLink() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlSchemaFacetLink>(),
-    16usize,
-    concat!("Size of: ", stringify!(_xmlSchemaFacetLink))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlSchemaFacetLink>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlSchemaFacetLink))
-  );
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -8500,19 +7907,6 @@ pub struct _xmlSchemaType {
   pub targetNamespace: *const xmlChar,
   pub attrUses: *mut ::std::os::raw::c_void,
 }
-#[test]
-fn bindgen_test_layout__xmlSchemaType() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlSchemaType>(),
-    224usize,
-    concat!("Size of: ", stringify!(_xmlSchemaType))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlSchemaType>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlSchemaType))
-  );
-}
 pub type xmlSchemaElement = _xmlSchemaElement;
 pub type xmlSchemaElementPtr = *mut xmlSchemaElement;
 #[repr(C)]
@@ -8545,19 +7939,6 @@ pub struct _xmlSchemaElement {
   pub defVal: xmlSchemaValPtr,
   pub idcs: *mut ::std::os::raw::c_void,
 }
-#[test]
-fn bindgen_test_layout__xmlSchemaElement() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlSchemaElement>(),
-    200usize,
-    concat!("Size of: ", stringify!(_xmlSchemaElement))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlSchemaElement>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlSchemaElement))
-  );
-}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct _xmlSchemaFacet {
@@ -8572,19 +7953,6 @@ pub struct _xmlSchemaFacet {
   pub val: xmlSchemaValPtr,
   pub regexp: xmlRegexpPtr,
 }
-#[test]
-fn bindgen_test_layout__xmlSchemaFacet() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlSchemaFacet>(),
-    72usize,
-    concat!("Size of: ", stringify!(_xmlSchemaFacet))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlSchemaFacet>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlSchemaFacet))
-  );
-}
 pub type xmlSchemaNotation = _xmlSchemaNotation;
 pub type xmlSchemaNotationPtr = *mut xmlSchemaNotation;
 #[repr(C)]
@@ -8595,19 +7963,6 @@ pub struct _xmlSchemaNotation {
   pub annot: xmlSchemaAnnotPtr,
   pub identifier: *const xmlChar,
   pub targetNamespace: *const xmlChar,
-}
-#[test]
-fn bindgen_test_layout__xmlSchemaNotation() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlSchemaNotation>(),
-    40usize,
-    concat!("Size of: ", stringify!(_xmlSchemaNotation))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlSchemaNotation>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlSchemaNotation))
-  );
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -8633,19 +7988,6 @@ pub struct _xmlSchema {
   pub counter: ::std::os::raw::c_int,
   pub idcDef: xmlHashTablePtr,
   pub volatiles: *mut ::std::os::raw::c_void,
-}
-#[test]
-fn bindgen_test_layout__xmlSchema() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlSchema>(),
-    160usize,
-    concat!("Size of: ", stringify!(_xmlSchema))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlSchema>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlSchema))
-  );
 }
 extern "C" {
   pub fn xmlSchemaFreeType(type_: xmlSchemaTypePtr);
@@ -8749,19 +8091,6 @@ pub struct _xmlURI {
   pub fragment: *mut ::std::os::raw::c_char,
   pub cleanup: ::std::os::raw::c_int,
   pub query_raw: *mut ::std::os::raw::c_char,
-}
-#[test]
-fn bindgen_test_layout__xmlURI() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlURI>(),
-    88usize,
-    concat!("Size of: ", stringify!(_xmlURI))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlURI>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlURI))
-  );
 }
 extern "C" {
   pub fn xmlCreateURI() -> xmlURIPtr;
@@ -9561,7 +8890,6 @@ pub const xmlSaveOption_XML_SAVE_XHTML: xmlSaveOption = 16;
 pub const xmlSaveOption_XML_SAVE_AS_XML: xmlSaveOption = 32;
 pub const xmlSaveOption_XML_SAVE_AS_HTML: xmlSaveOption = 64;
 pub const xmlSaveOption_XML_SAVE_WSNONSIG: xmlSaveOption = 128;
-
 pub type xmlSaveOption = ::std::os::raw::c_uint;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -11324,19 +10652,6 @@ pub struct _xmlLocationSet {
   pub locMax: ::std::os::raw::c_int,
   pub locTab: *mut xmlXPathObjectPtr,
 }
-#[test]
-fn bindgen_test_layout__xmlLocationSet() {
-  assert_eq!(
-    ::std::mem::size_of::<_xmlLocationSet>(),
-    16usize,
-    concat!("Size of: ", stringify!(_xmlLocationSet))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<_xmlLocationSet>(),
-    8usize,
-    concat!("Alignment of ", stringify!(_xmlLocationSet))
-  );
-}
 extern "C" {
   pub fn xmlXPtrLocationSetCreate(val: xmlXPathObjectPtr) -> xmlLocationSetPtr;
 }
@@ -11415,7 +10730,6 @@ extern "C" {
 extern "C" {
   pub fn xmlXPtrEvalRangePredicate(ctxt: xmlXPathParserContextPtr);
 }
-pub type __builtin_va_list = [__va_list_tag; 1usize];
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct __va_list_tag {
@@ -11423,17 +10737,4 @@ pub struct __va_list_tag {
   pub fp_offset: ::std::os::raw::c_uint,
   pub overflow_arg_area: *mut ::std::os::raw::c_void,
   pub reg_save_area: *mut ::std::os::raw::c_void,
-}
-#[test]
-fn bindgen_test_layout___va_list_tag() {
-  assert_eq!(
-    ::std::mem::size_of::<__va_list_tag>(),
-    24usize,
-    concat!("Size of: ", stringify!(__va_list_tag))
-  );
-  assert_eq!(
-    ::std::mem::align_of::<__va_list_tag>(),
-    8usize,
-    concat!("Alignment of ", stringify!(__va_list_tag))
-  );
 }
